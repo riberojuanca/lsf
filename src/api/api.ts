@@ -4,7 +4,8 @@ const api = {
   positions: {
     list: async (): Promise<PositionsTable[]> => {
       return fetch(
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1MzD5sJODRVxV9ibxUXNvLWll7tEACnocb1QBMIJTmci2YFg8GIoeAhEevCgW6Pp4TMeGR2_0Nkeb/pub?output=tsv"
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1MzD5sJODRVxV9ibxUXNvLWll7tEACnocb1QBMIJTmci2YFg8GIoeAhEevCgW6Pp4TMeGR2_0Nkeb/pub?output=tsv",
+        { next: { tags: ["positions"] } }
       )
         .then((res) => res.text())
         .then((text) => {
