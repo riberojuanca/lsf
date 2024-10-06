@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="h-screen flex flex-col items-center justify-center gap-2">
+    <div className="flex flex-col items-center justify-center gap-2 p-4">
       <div className=" absolute top-4 right-4">
         <ModeToggle />
       </div>
