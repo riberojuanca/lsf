@@ -4,11 +4,11 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center gap-2 p-4">
-      <div className=" absolute top-4 right-4">
+    <main className="flex flex-col items-center justify-center gap-6 p-8">
+      <section className=" absolute top-4 right-4">
         <ModeToggle />
-      </div>
-      <div className="flex items-center justify-center gap-2 mx-auto">
+      </section>
+      <section className="flex flex-col items-start justify-center gap-8">
         <Image
           className="rounded-md w-20 h-20 object-cover"
           src="/lsflogo.jpg"
@@ -16,8 +16,8 @@ export default function Home() {
           width={400}
           height={400}
         />
-      </div>
-      <PositionsTable />
-    </div>
+        <PositionsTable />
+      </section>
+    </main>
   );
 }
