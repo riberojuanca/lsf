@@ -41,11 +41,11 @@ async function PositionsTable() {
             <TableHead>#</TableHead>
             <TableHead className="min-w-fit">Equipo</TableHead>
             <TableHead>PJ</TableHead>
-            <TableHead className="hidden md:table-cell">PG</TableHead>
-            <TableHead className="hidden md:table-cell">PE</TableHead>
-            <TableHead className="hidden md:table-cell">PP</TableHead>
-            <TableHead className="hidden md:table-cell">GF</TableHead>
-            <TableHead className="hidden md:table-cell">GC</TableHead>
+            <TableHead className="hidden sm:table-cell">PG</TableHead>
+            <TableHead className="hidden sm:table-cell">PE</TableHead>
+            <TableHead className="hidden sm:table-cell">PP</TableHead>
+            <TableHead className="hidden sm:table-cell">GF</TableHead>
+            <TableHead className="hidden sm:table-cell">GC</TableHead>
             <TableHead>DG</TableHead>
             <TableHead>Puntos</TableHead>
           </TableRow>
@@ -60,19 +60,19 @@ async function PositionsTable() {
                 {position.equipo}
               </TableCell>
               <TableCell>{position.pj}</TableCell>
-              <TableCell className="hidden md:table-cell">
+              <TableCell className="hidden sm:table-cell">
                 {position.pg}
               </TableCell>
-              <TableCell className="hidden md:table-cell">
+              <TableCell className="hidden sm:table-cell">
                 {position.pe}
               </TableCell>
-              <TableCell className="hidden md:table-cell">
+              <TableCell className="hidden sm:table-cell">
                 {position.pp}
               </TableCell>
-              <TableCell className="hidden md:table-cell">
+              <TableCell className="hidden sm:table-cell">
                 {position.gf}
               </TableCell>
-              <TableCell className="hidden md:table-cell">
+              <TableCell className="hidden sm:table-cell">
                 {position.gc}
               </TableCell>
               <TableCell>{position.dg}</TableCell>
