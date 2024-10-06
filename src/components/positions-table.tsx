@@ -1,3 +1,5 @@
+import { MdOutlineCheckBoxOutlineBlank } from "react-icons/md";
+
 import {
   Table,
   TableBody,
@@ -26,21 +28,24 @@ async function PositionsTable() {
 
   return (
     <div>
-      <div></div>
-      <Table>
+      <Table className="p-1 mx-auto">
+        <TableCaption>Liga Salteña de Fútbol 2024</TableCaption>
         <TableCaption>
-          Posiciones Primera División Liga Salteña de Fútbol
+          <div className="flex justify-center items-center gap-2">
+            <MdOutlineCheckBoxOutlineBlank className="mb-1 text-lg bg-green-500 rounded-sm text-green-500 inline-block" />{" "}
+            Clasificados a la Liguilla
+          </div>
         </TableCaption>
         <TableHeader>
           <TableRow>
             <TableHead>#</TableHead>
             <TableHead className="min-w-fit">Equipo</TableHead>
             <TableHead>PJ</TableHead>
-            <TableHead>PG</TableHead>
-            <TableHead>PE</TableHead>
-            <TableHead>PP</TableHead>
-            <TableHead>GF</TableHead>
-            <TableHead>GC</TableHead>
+            <TableHead className="hidden md:table-cell">PG</TableHead>
+            <TableHead className="hidden md:table-cell">PE</TableHead>
+            <TableHead className="hidden md:table-cell">PP</TableHead>
+            <TableHead className="hidden md:table-cell">GF</TableHead>
+            <TableHead className="hidden md:table-cell">GC</TableHead>
             <TableHead>DG</TableHead>
             <TableHead>Puntos</TableHead>
           </TableRow>
@@ -55,13 +60,23 @@ async function PositionsTable() {
                 {position.equipo}
               </TableCell>
               <TableCell>{position.pj}</TableCell>
-              <TableCell>{position.pg}</TableCell>
-              <TableCell>{position.pe}</TableCell>
-              <TableCell>{position.pp}</TableCell>
-              <TableCell>{position.gf}</TableCell>
-              <TableCell>{position.gc}</TableCell>
+              <TableCell className="hidden md:table-cell">
+                {position.pg}
+              </TableCell>
+              <TableCell className="hidden md:table-cell">
+                {position.pe}
+              </TableCell>
+              <TableCell className="hidden md:table-cell">
+                {position.pp}
+              </TableCell>
+              <TableCell className="hidden md:table-cell">
+                {position.gf}
+              </TableCell>
+              <TableCell className="hidden md:table-cell">
+                {position.gc}
+              </TableCell>
               <TableCell>{position.dg}</TableCell>
-              <TableCell className="bg-red-600 text-white font-bold">
+              <TableCell className="bg-black text-white dark:bg-white dark:text-black font-bold">
                 {position.puntos}
               </TableCell>
             </TableRow>

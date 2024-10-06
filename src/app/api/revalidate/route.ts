@@ -1,6 +1,6 @@
 import { revalidateTag } from "next/cache";
 
-export async function GET() {
+export default async function GET() {
   revalidateTag("positions");
   return Response.json({ revalidated: true });
 }
