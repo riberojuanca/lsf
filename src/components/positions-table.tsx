@@ -27,7 +27,7 @@ async function PositionsTable() {
   });
 
   return (
-    <div className="md:grid flex flex-col gap-4 md:grid-cols-3 items-center justify-between  md:gap-8 mx-auto">
+    <div className="md:grid flex flex-col gap-4 md:grid-cols-2 items-center justify-between  md:gap-8 mx-auto">
       <div className="p-4 md:p-10 border border-black/5 dark:border dark:border-white/5 dark:bg-white/5 rounded-lg col-span-2">
         <Table className="p-1 mx-auto">
           <TableCaption>Liga Salteña de Fútbol 2024</TableCaption>
@@ -85,8 +85,8 @@ async function PositionsTable() {
           </TableBody>
         </Table>
       </div>
-      <div className="flex flex-col gap-4">
-        <div className="p-4 border border-black/5 dark:border dark:border-white/5 dark:bg-white/5 rounded-lg">
+      <div className="flex flex-col h-full gap-4 hidden">
+        <div className="h-full p-4 border border-black/5 dark:border dark:border-white/5 dark:bg-white/5 rounded-lg">
           <Table className="p-1 mx-auto w-full ">
             <TableHeader>
               <TableRow>
@@ -107,7 +107,7 @@ async function PositionsTable() {
             </TableBody>
           </Table>
         </div>
-        <div className="p-4 border border-black/5 dark:border dark:border-white/5 dark:bg-white/5 rounded-lg">
+        <div className="h-full p-4 border border-black/5 dark:border dark:border-white/5 dark:bg-white/5 rounded-lg">
           <Table className="p-1 mx-auto w-full">
             <TableHeader>
               <TableRow>

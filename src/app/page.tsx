@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center gap-6 p-8">
+    <main className="flex flex-col items-center justify-center gap-6 py-8 px-4">
       <section className=" absolute top-4 right-4">
         <ModeToggle />
       </section>
